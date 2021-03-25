@@ -18,6 +18,14 @@ function App() {
         >
           Learn React
         </a>
+        <a
+          className="App-link"
+          href="https://www.typescriptlang.org/docs/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn Typescript
+        </a>
       </header>
     </div>
   );
