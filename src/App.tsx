@@ -1,34 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Router } from "@reach/router"
 
-function App() {
+import Starter from './components/Starter'
+
+export const App: React.VFC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <a
-          className="App-link"
-          href="https://www.typescriptlang.org/docs/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Typescript
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Starter.Home path="/" />
+    </Router>
+  )
 }
 
-export default App;
+export default App
