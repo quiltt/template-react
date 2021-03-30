@@ -45,9 +45,9 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 This project is based on the following technologies:
 
-* [Tailwind](https://tailwindcss.com/docs)
+* [Tailwind CSS](https://tailwindcss.com/docs)
 * [Typescript](https://www.typescriptlang.org/docs/)
 * [React](https://reactjs.org)
-* [Graphql](https://graphql.org/learn/)
+* [GraphQL](https://graphql.org/learn/)
 * [Apollo](https://www.apollographql.com/docs/react/)
 * [Quiltt](https://postman.quiltt.io/)

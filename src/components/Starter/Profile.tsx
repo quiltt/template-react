@@ -44,18 +44,24 @@ export const LogoutButton: React.VFC<LogoutButtonProps> = ({ session, onClick })
     if(onClick) onClick()
   }
 
-  return <button onClick={handleClick} type="button"
-        className="mt-5 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-    >Sign out</button>
+  return (
+    <button
+      onClick={handleClick}
+      type="button"
+      className="mt-5 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+    >
+      Sign out
+    </button>
+  )
 }
 
 
 const PROFILE_QUERY = gql`
 query {
-    profile {
-        id
-        email
-    }
+  profile {
+      id
+      email
+  }
 }
 `
 

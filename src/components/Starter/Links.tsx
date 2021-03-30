@@ -4,10 +4,10 @@ export const Links: React.VFC = () => {
   return (
     <ul className="mt-8">
       <li><h3 className="text-4xl">Documentation</h3></li>
-      <li><Link href="https://tailwindcss.com/docs">Tailwind</Link></li>
+      <li><Link href="https://tailwindcss.com/docs">Tailwind CSS</Link></li>
       <li><Link href="https://www.typescriptlang.org/docs/">Typescript</Link></li>
       <li><Link href="https://reactjs.org">React</Link></li>
-      <li><Link href="https://graphql.org/learn/">Graphql</Link></li>
+      <li><Link href="https://graphql.org/learn/">GraphQL</Link></li>
       <li><Link href="https://www.apollographql.com/docs/react/">Apollo</Link></li>
       <li><Link href="https://postman.quiltt.io/">Quiltt</Link></li>
     </ul>
