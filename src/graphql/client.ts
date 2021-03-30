@@ -2,7 +2,7 @@ import { ApolloClient, InMemoryCache } from '@apollo/client'
 
 import useQuilttLink from './links/quilttLink'
 
-export const useApolloClient = (token: string) => {
+export const useQuilttClient = (token: string) => {
   const quilttLink = useQuilttLink(token)
 
   return new ApolloClient({
@@ -11,3 +11,5 @@ export const useApolloClient = (token: string) => {
     connectToDevTools: true
   })
 }
+
+export default useQuilttClient
