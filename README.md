@@ -43,4 +43,11 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is based on the following technologies:
+
+* [Tailwind](https://tailwindcss.com/docs)
+* [Typescript](https://www.typescriptlang.org/docs/)
+* [React](https://reactjs.org)
+* [Graphql](https://graphql.org/learn/)
+* [Apollo](https://www.apollographql.com/docs/react/)
+* [Quiltt](https://postman.quiltt.io/)
