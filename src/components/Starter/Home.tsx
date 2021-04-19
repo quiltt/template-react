@@ -3,7 +3,7 @@ import { RouteComponentProps } from "@reach/router"
 
 import Links from './Links'
 import Logo from '../Logo'
-import Profile from './Profile'
+import ProfileCard from './Profile/Card'
 
 export type HomeProps = RouteComponentProps & {}
 
@@ -16,7 +16,7 @@ export const Home: React.VFC<HomeProps> = () => {
           Edit <code className="font-mono bg-gray-400 dark:bg-gray-700">src/App.tsx</code> and save to reload.
         </p>
 
-        <Profile />
+        <ProfileCard />
 
         <Links />
       </header>

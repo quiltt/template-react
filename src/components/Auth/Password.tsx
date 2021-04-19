@@ -1,5 +1,5 @@
 import React from 'react'
-import useQuilttAuth from './api'
+import { useQuilttAuth } from '../../quiltt'
 
 export type PasswordProps = {
   email: string

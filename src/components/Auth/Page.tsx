@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useQuilttContext } from '../../quiltt'
 import { RouteComponentProps } from '@reach/router'
 import Logo from '../Logo'
 import Username from './Username'
@@ -7,6 +8,7 @@ import Password from './Password'
 export type AuthPageProps = RouteComponentProps & {}
 
 export const AuthPage: React.VFC<AuthPageProps> = ({ navigate }) => {
+  const { setAuthorizationToken } = useQuilttContext()
   const [email, setEmail] = React.useState<string>()
 
   const handleIdentification = (email: string) => {
@@ -14,7 +16,7 @@ export const AuthPage: React.VFC<AuthPageProps> = ({ navigate }) => {
   }
 
   const handleAuthentication = (token: string) => {
-    localStorage.setItem('QUILTT_TOKEN', token)
+    setAuthorizationToken(token)
 
     if(navigate) navigate("/")
   }

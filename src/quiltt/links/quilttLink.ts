@@ -7,7 +7,7 @@ import usePreviewLink from './previewLink'
 
 const graphqlEndpoint = new URL('v1/graphql', 'https://api.quiltt.io')
 
-const useQuilttLink = (token: string) => {
+const useQuilttLink = (token: string | undefined) => {
   const errorLink   = useErrorLink()
   const authLink    = useAuthLink(token)
   const previewLink = usePreviewLink(graphqlEndpoint.toString())
