@@ -5,7 +5,7 @@ import { RouteComponentProps } from "@reach/router"
 export type LogoutButtonProps = RouteComponentProps & {
 }
 
-export const LogoutButton: React.VFC<LogoutButtonProps> = ({}) => {
+export const LogoutButton: React.VFC<LogoutButtonProps> = () => {
   const { setAuthorizationToken } = useQuilttContext()
 
   const handleClick = () => {

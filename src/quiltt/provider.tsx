@@ -3,6 +3,7 @@ import * as React from 'react'
 import { ApolloProvider } from '@apollo/client'
 import { useQuilttClient } from './client'
 import { QuilttContext } from './context'
+import useLocalStorage from './useLocalStorage'
 
 type QuilttProviderProps = {
 
@@ -11,7 +12,7 @@ type QuilttProviderProps = {
 export const QuilttProvider: React.FC<QuilttProviderProps> = ({
   children
 }) => {
-  const [authorizationToken, setAuthorizationToken] = React.useState<string | undefined>()
+  const [authorizationToken, setAuthorizationToken] = useLocalStorage<string | undefined>('QUILTT_TOKEN', undefined)
   const quilttClient = useQuilttClient(authorizationToken)
 
   return (
