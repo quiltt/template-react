@@ -2,6 +2,7 @@ import React from 'react'
 import { RouteComponentProps } from "@reach/router"
 
 import { useQuilttContext } from '../../../quiltt'
+import PlaidLinkButton from '../BankConnection/PlaidLinkButton'
 
 import LoginButton from './LoginButton'
 import LogoutButton from './LogoutButton'
@@ -17,6 +18,7 @@ export const ProfileCard: React.VFC<ProfileCardProps> = () => {
   if(authorizationToken) {
     return <>
       <Summary />
+      <PlaidLinkButton />
       <LogoutButton />
     </>
   } else {

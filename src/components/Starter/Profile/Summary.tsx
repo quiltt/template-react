@@ -4,10 +4,10 @@ import { gql, useQuery } from '@apollo/client'
 
 const GET_PROFILE = gql`
 query {
-    profile {
-        id
-        email
-    }
+  profile {
+    id
+    email
+  }
 }
 `
 
