@@ -7,6 +7,8 @@ export const useErrorLink = () => {
         console.log(
           `[GraphQL error]: Message: ${error.message}, Location: ${error.locations}, Path: ${error.path}`
         )
+
+        return error
       })
     }
 
