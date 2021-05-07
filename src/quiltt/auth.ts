@@ -18,17 +18,17 @@ export type PasswordPayload = {
 }
 
 export const useQuilttAuth = () => {
-  const integrationId = process.env.REACT_APP_QUILTT_INTEGRATION_ID
+  const appId = process.env.REACT_APP_QUILTT_APP_ID
 
   const AuthAPI = {
     ping: () => {
       return Axios.get(ENDPOINT, CONFIG)
     },
     identify: (payload: UsernamePayload) => {
-      return Axios.post(ENDPOINT, { user: { ...payload, integration_id: integrationId } }, CONFIG)
+      return Axios.post(ENDPOINT, { user: payload, app_id: appId }, CONFIG)
     },
     authenticate: (payload: PasswordPayload) => {
-      return Axios.put(ENDPOINT, { user: { ...payload, integration_id: integrationId } }, CONFIG)
+      return Axios.put(ENDPOINT, { user: payload, app_id: appId }, CONFIG)
     }
   }
 
