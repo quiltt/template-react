@@ -12,9 +12,9 @@ export type UsernamePayload = {
   email: string
 }
 
-export type PasswordPayload = {
+export type PasscodePayload = {
   email: string
-  password: string
+  passcode: string
 }
 
 export const useQuilttAuth = () => {
@@ -27,7 +27,7 @@ export const useQuilttAuth = () => {
     identify: (payload: UsernamePayload) => {
       return Axios.post(ENDPOINT, { user: payload, app_id: appId }, CONFIG)
     },
-    authenticate: (payload: PasswordPayload) => {
+    authenticate: (payload: PasscodePayload) => {
       return Axios.put(ENDPOINT, { user: payload, app_id: appId }, CONFIG)
     }
   }

@@ -1,20 +1,20 @@
 import React from 'react'
 import { useQuilttAuth } from '../../quiltt'
 
-export type PasswordProps = {
+export type PasscodeProps = {
   email: string
   onAuthentication: (token: string) => void
 }
 
-export const Password: React.VFC<PasswordProps> = ({ email, onAuthentication }) => {
-  const [password, setPassword] = React.useState<string>()
+export const Passcode: React.VFC<PasscodeProps> = ({ email, onAuthentication }) => {
+  const [passcode, setPasscode] = React.useState<string>()
   const auth = useQuilttAuth()
 
   const handleSubmit = async(event: React.SyntheticEvent) => {
     event.preventDefault()
-    if(!password) return
+    if(!passcode) return
 
-    const response = await auth.authenticate({ email: email, password: password })
+    const response = await auth.authenticate({ email: email, passcode: passcode })
     switch (response.status) {
       case 201: // Created
         onAuthentication(response.headers['authorization'].split(' ')[1])
@@ -31,15 +31,15 @@ export const Password: React.VFC<PasswordProps> = ({ email, onAuthentication }) 
       <input type="hidden" name="remember" value="true" />
       <div className="shadow-sm -space-y-px">
         <div>
-          <label htmlFor="password" className="sr-only">Pass Code</label>
-          <input id="password"
-                 name="password"
-                 type="password"
-                 autoComplete="password"
+          <label htmlFor="passcode" className="sr-only">Pass Code</label>
+          <input id="passcode"
+                 name="passcode"
+                 type="passcode"
+                 autoComplete="passcode"
                  className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                  placeholder="000000"
-                 value={password}
-                 onChange={(e) => setPassword(e.target.value) }
+                 value={passcode}
+                 onChange={(e) => setPasscode(e.target.value) }
                  required />
         </div>
       </div>
@@ -58,4 +58,4 @@ export const Password: React.VFC<PasswordProps> = ({ email, onAuthentication }) 
   )
 }
 
-export default Password
+export default Passcode
