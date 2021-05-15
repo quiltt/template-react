@@ -1,6 +1,6 @@
 import Axios from 'axios'
 
-const ENDPOINT = "https://auth.quiltt.io/v1/session"
+const ENDPOINT = "https://auth.quiltt.io/v1/users/session"
 const CONFIG = {
   headers: {
     'Content-Type': 'application/json'

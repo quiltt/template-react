@@ -17,7 +17,7 @@ export const Passcode: React.VFC<PasscodeProps> = ({ email, onAuthentication }) 
     const response = await auth.authenticate({ email: email, passcode: passcode })
     switch (response.status) {
       case 201: // Created
-        onAuthentication(response.headers['authorization'].split(' ')[1])
+        onAuthentication(response.data.token)
         break
       case 401: // Unauthorized
       case 422: // Unprocessable Entity
