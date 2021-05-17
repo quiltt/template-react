@@ -14,7 +14,7 @@ export const Passcode: React.VFC<PasscodeProps> = ({ email, onAuthentication }) 
     event.preventDefault()
     if(!passcode) return
 
-    const response = await auth.authenticate({ email: email, passcode: passcode })
+    const response = await auth.authenticate({ email: email }, passcode)
     switch (response.status) {
       case 201: // Created
         onAuthentication(response.data.token)
