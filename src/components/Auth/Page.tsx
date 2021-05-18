@@ -3,7 +3,7 @@ import { useQuilttContext } from '../../quiltt'
 import { RouteComponentProps } from '@reach/router'
 import Logo from '../Logo'
 import Username from './Username'
-import Password from './Password'
+import Passcode from './Passcode'
 
 export type AuthPageProps = RouteComponentProps & {}
 
@@ -25,7 +25,7 @@ export const AuthPage: React.VFC<AuthPageProps> = ({ navigate }) => {
     if(!email) {
       return <Username onAuthentication={handleAuthentication} onIdentification={handleIdentification} />
     } else {
-      return <Password onAuthentication={handleAuthentication} email={email} />
+      return <Passcode onAuthentication={handleAuthentication} email={email} />
     }
   }
 
