@@ -1,14 +1,13 @@
 import * as React from 'react'
-
 import { gql, useQuery } from '@apollo/client'
 
 const GET_PROFILE = gql`
-query {
-  profile {
-    id
-    email
+  query {
+    profile {
+      id
+      email
+    }
   }
-}
 `
 
 export type SummaryProps = {
