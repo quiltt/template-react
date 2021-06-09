@@ -24,11 +24,11 @@ export const useQuilttAuth = () => {
     ping: () => {
       return Axios.get(ENDPOINT, CONFIG)
     },
-    identify: (user: UsernamePayload) => {
-      return Axios.post(ENDPOINT, { app_id: appId, user: user }, CONFIG)
+    identify: (username: UsernamePayload) => {
+      return Axios.post(ENDPOINT, { session: { app_id: appId, ...username } }, CONFIG)
     },
-    authenticate: (user: UsernamePayload, passcode: string) => {
-      return Axios.put(ENDPOINT, { app_id: appId, user: user, passcode: passcode }, CONFIG)
+    authenticate: (username: UsernamePayload, passcode: string) => {
+      return Axios.put(ENDPOINT, { session: { app_id: appId, ...username, passcode: passcode } }, CONFIG)
     }
   }
 
